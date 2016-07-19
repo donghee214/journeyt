@@ -1,0 +1,325 @@
+/* style.css
+ * This file provides css styles.
+ */
+
+body,html {
+	background-color: #3b4b54; width : 100%;
+	height: 100%;
+	margin: 0 auto;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	color: #ffffff;
+}
+
+a {
+	text-decoration: none;
+	color: #00aed1;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+.newappIcon {
+	padding-top: 10%;
+	display: block;
+	margin: 0 auto;
+	padding-bottom: 2em;
+	max-width:200px;
+}
+
+h1 {
+	font-weight: bold;
+	font-size: 2em;
+}
+
+.leftHalf {
+	float: left;
+	background-color: #26343f;
+	width: 45%;
+	height: 100%;
+}
+
+.rightHalf {
+	float: right;
+	width: 55%;
+	background-color: #313f4a;
+	height: 100%;
+	overflow:auto;
+}
+
+.blue {
+	color: #00aed1;
+}
+
+
+table {
+	table-layout: fixed;
+	width: 800px;
+	margin: 0 auto;
+	word-wrap: break-word;
+	padding-top:10%;
+}
+
+th {
+	border-bottom: 1px solid #000;
+}
+
+th, td {
+	text-align: left;
+	padding: 2px 20px;
+}
+
+.env-var {
+	text-align: right;
+	border-right: 1px solid #000;
+	width: 30%;
+}
+
+pre {
+	padding: 0;
+	margin: 0;
+}
+
+html{
+    height:100%;
+    width:100%;
+}
+
+body{
+    background-image:url("images/map.png");
+    background-repeat:no-repeat;
+}
+
+.testButton{
+    background-image:url("images/locationPin.png");
+    background-size: cover;
+    top:450px;
+    left:350px;
+    position:absolute;
+    width:100px;
+    height:100px;
+}
+
+.infoBox{
+    position:absolute;
+    height:100px;
+    width:100%;
+    bottom:0;
+    left:0;
+	background-color: rgba(72,72,72,0.48);
+    font-size:30px;
+    text-align:center;
+    font-color:white;
+    font-family: 'raleway';
+}
+
+.beach{
+    top:25px;
+    position:relative;
+}
+
+.container{
+    position:absolute;
+    height:100%;
+    width:100%;
+    top:-800px;
+    left:0;
+    background-color:white;
+}
+
+.arrow{
+    position:relative;
+    top:0px;
+    left:20%;
+   height:100px;
+    background-image:url("images/arrowDown.png");
+    background-repeat:no-repeat;
+        transform: scale(0.5, 0.5);
+    -ms-transform: scale(0.5, 0.5);
+    -webkit-transform: scale(0.5, 0.5);
+}
+
+.arrowUp{
+  -ms-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg); 
+  transform: rotate(180deg);
+    height:200px;
+    width:100%;
+}
+
+.exit{
+    background-image:url('images/exitGrey.png');
+    background-repeat:no-repeat;
+    background-color:white;
+    background-size:40px 40px;
+    border:0 !important;
+    outline:0 !important;
+    height:40px;
+    width:40px;
+    position:absolute;
+    z-index:30 !important;
+right:20px;
+    top:20px;
+}
+
+.pic{
+    position:relative;
+    background-image:url('images/waikiki beach.png');
+    background-size:cover;
+    width:330px;
+    height:330px;
+    left:calc(50% - 165px);
+    top:-740px;
+    border-radius: 100%;
+}
+
+.address{
+    position:absolute;
+    width:100%;
+    top:410px !important;
+    text-align: center;
+    color:grey;
+    font-family: 'raleway';
+    font-size:19px;
+    padding-right:8px;
+    
+}
+
+.place{
+    background-image:url('images/place.png');
+    background-repeat:no-repeat;
+    background-color:white;
+    background-size:40px 40px;
+    border:0 !important;
+    outline:0 !important;
+    height:40px;
+    width:40px;
+    position:absolute;
+    z-index:30 !important;
+left:5px;
+    top:85px;
+}
+
+.distance{
+    top:35px;
+    position:absolute;
+    font-size:20px;
+    text-align:right;
+    margin-left:20px;
+}
+
+.arrowRight{
+        background-image:url('images/arrowRight.png');
+    background-repeat:no-repeat;
+    top:-10px;
+    position:absolute;
+    font-size:20px;
+    height:100px;
+    width:100px;
+    z-index:5;
+    right:0px;
+            transform: scale(0.1, 0.1);
+    -ms-transform: scale(0.1, 0.1);
+    -webkit-transform: scale(0.1, 0.1);
+        -ms-transform: rotate(180deg); /* IE 9 */
+    -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+    transform: rotate(180deg);
+}
+
+.holyshit{
+    position:absolute;
+    height:100%;
+    width:100%;
+    top:-800px;
+    left:0;
+    background-color:white;
+}
+
+.Box1{
+    position:absolute;
+    height:100px;
+    width:100%;
+    bottom:0;
+    left:0;
+	background-color: rgba(72,72,72,0.48);
+    font-size:30px;
+    text-align:center;
+    font-color:white;
+    font-family: 'raleway';
+}
+
+.mountain{
+        top:25px;
+    position:relative;
+}
+
+.pic1{
+        position:relative;
+    background-image:url('images/diamond.png');
+    background-size:cover;
+    width:330px;
+    height:330px;
+    left:calc(50% - 165px);
+    top:-740px;
+    border-radius: 100%;
+}
+
+.checkIn{
+    background-image:url('images/success (2).png');
+    background-repeat:no-repeat;
+    background-color:white;
+    background-size:40px 40px;
+    border:0 !important;
+    outline:0 !important;
+    height:40px;
+    width:40px;
+    position:absolute;
+    z-index:30 !important;
+    left:calc(50% - 20px);
+    top:620px;
+}
+
+.checkIn1{
+        background-image:url('images/success.png');
+    background-repeat:no-repeat;
+    background-color:white;
+    background-size:40px 40px;
+    border:0 !important;
+    outline:0 !important;
+    height:40px;
+    width:40px;
+    position:absolute;
+    z-index:30 !important;
+    left:calc(50% - 20px);
+    top:620px;
+}
+
+.checkIn2{
+    background-image:url('images/success (2).png');
+    background-repeat:no-repeat;
+    background-color:white;
+    background-size:40px 40px;
+    border:0 !important;
+    outline:0 !important;
+    height:40px;
+    width:40px;
+    position:absolute;
+    z-index:30 !important;
+    left:calc(50% - 20px);
+    top:620px;
+}
+
+.emergency{
+    width:100%;
+    height:300px;
+    bottom:0;
+    left:0;
+    position:absolute;
+    background-color:rgba(92,92,92,0.8);
+text-align:center;
+
+}
+.text{
+    margin-top:25px;
+    font-size:25px;
+}
