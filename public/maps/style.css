@@ -235,6 +235,7 @@ left:40px;
     width:100%;
     top:-1550px;
     left:0;
+    z-index: 10;
     background-color:white;
 }
 

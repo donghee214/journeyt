@@ -14,7 +14,7 @@
   />
   <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
   <meta charset="utf-8">
-  <title>Simple icons</title>
+  <title>✈ JOURNEY ✈</title>
   <style>
     html,
     body {
@@ -33,10 +33,23 @@
       bottom: 47px;
       left: 40px;
     }
+
+    .backButton {
+      position: fixed;
+      width: 60px;
+      height: 60px;
+      right: 25px;
+      top: 25px;
+      opacity: 0.75;
+      z-index: 5;
+    }
   </style>
 </head>
 
 <body>
+  <a href="../newhome.html">
+    <img src="images/arrows.svg" class="backButton">
+  </a>
   <div id="map"></div>
   <div id="capture"></div>
   <input class="button" type="image" src="../images/alarm.png" />
