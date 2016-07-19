@@ -9,6 +9,7 @@
   <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,200,500,600,700' rel='stylesheet' type='text/css'>
   <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.8.10/jquery-ui.min.js"></script>
   <link rel="stylesheet" href="style.css" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300' rel='stylesheet' type='text/css'>
   <link href="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.8.10/themes/ui-lightness/jquery-ui.css" rel="stylesheet" type="text/css"
   />
   <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
@@ -39,24 +40,34 @@
   <div id="map"></div>
   <div id="capture"></div>
   <input class="button" type="image" src="../images/alarm.png" />
-<div class="emergency">
-  <div class="text">
-  What's your emergency? <br><br> Lost Baggage <br><br> I'm Lost <br><br> I'm Hurt
-  </div>
+  <div class="emergency">
+    <div class="text">
+      What's Your Emergency?
+    </div>
+    <div class="subtext">
+      <br> Lost Baggage <br><br> I'm Lost <br><br> I'm Hurt
+      <div class="baggage">
+      </div>
+      <div class="lost">
+      </div>
+      <div class="aid">
+      </div>
+    </div>
   </div>
   <div class="container">
     <div class="address">
-      Honolulu, HI 96815, USA <br> <br> 100-600 points <br> <br> 23 Of Your Friends Have Visited Here! <br><br> Waikiki Beach
-      is a beachfront neighborhood of Honolulu, on the south shore of the island of Oʻahu, in Hawaii, United States.
+      Honolulu, HI 96815, USA <br> <br>
+      <div class="color"> Reward: 100-600 JOURNEY Points </div><br> 620 people visited here today<br><br> Waikiki Beach is a beachfront neighborhood of Honolulu,
+      on the south shore of the island of Oʻahu, in Hawaii, United States.
       <div class="place">
       </div>
     </div>
     <div class="infoBox">
       <div class="beach">
-        Waikiki Beach
+        WAIKIKI BEACH
       </div>
       <div class="distance">
-        6.9 kM
+        0.1 km
       </div>
       <div class="arrowRight">
       </div>
@@ -64,6 +75,9 @@
       </div>
       <div class="extra">
         <div class="pic">
+          <div class="claimed">
+            Reward has been added!
+          </div>
         </div>
         <div class="bio">
 
@@ -80,17 +94,18 @@
 
   <div class="holyshit">
     <div class="address">
-      Honolulu, HI 96815, USA <br> <br> 50-300 points <br> <br> 10 Of Your Friends Have Visited Here! <br><br> Diamond Head
-      is the name of a volcanic tuff cone on the Hawaiian island of Oʻahu and known to Hawaiians as Lēʻahi.
+      Honolulu, HI 96815, USA <br><br>
+      <div class="color"> Reward: 100-500 JOURNEY Points </div> <br> 250 people visited here today <br><br> Diamond Head is the name of a volcanic tuff
+      cone on the Hawaiian island of Oʻahu and known to Hawaiians as Lēʻahi.
       <div class="place">
       </div>
     </div>
     <div class="Box1">
       <div class="mountain">
-        Diamond Head
+        DIAMOND HEAD
       </div>
       <div class="distance">
-        14.2 kM
+        14.2 km
       </div>
       <div class="arrowRight">
       </div>
@@ -98,6 +113,9 @@
       </div>
       <div class="extra">
         <div class="pic1">
+          <div class="failed">
+            Too far from location!
+          </div>
         </div>
         <div class="bio">
 
@@ -117,8 +135,8 @@
 <script>
   function initMap() {
         var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 16,
-          center: {lat: 21.295, lng: -157.84}
+          zoom: 15,
+          center: {lat: 21.279721, lng: -157.8381423}
         });
 
         var grocery = '../images/cart.png';
@@ -131,6 +149,7 @@
         var hospital = '../images/placeholder.png';
         var hand = '../images/hand.png';
         var beach = '../images/sunbed.png';
+            var avatar = "images/tree.png"
 
         var grocery = new google.maps.Marker({
           position: {lat: 21.293, lng: -157.838},
@@ -197,9 +216,16 @@
           map: map,
           icon: beach
         });
+    var avatar = new google.maps.Marker({
+          position: {lat: 21.28191, lng: -157.8381423},
+          map: map,
+          icon: avatar,
+        });
 
 
 $(".emergency").hide();
+$(".claimed").hide();
+$(".failed").hide();
  beach.addListener('click', function() {
       $('.container').animate({ top: -675 }, { duration: 900, easing: 'easeOutQuint' });
         });       
@@ -214,14 +240,17 @@ $(".emergency").hide();
            $('.button').animate({ left: 40}, { duration: 900, easing: 'easeOutQuint' });
     });
     
+    
  $(".checkIn").click(function(){
         $(".checkIn").addClass("checkIn1");
+           $(".claimed").hide().fadeIn(1500);
     });
     
-    
- $(".checkIn2").click(function(){
-        $(".checkIn2").addClass("checkIn1");
+    $(".checkIn2").click(function(){
+         $(".failed").hide().fadeIn(1500);
     });
+    
+
     
 diamondHead.addListener('click', function() {
       $('.holyshit').animate({ top: -675 }, { duration: 900, easing: 'easeOutQuint' });
@@ -241,6 +270,7 @@ diamondHead.addListener('click', function() {
 $(".button").click(function(){
   $(".emergency").slideToggle();
 });
+
 </script>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDOZPSSq2IzUG-L7oxcpHWEL0jkD1ZIgDc&callback=initMap">
 

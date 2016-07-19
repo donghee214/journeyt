@@ -6,7 +6,7 @@ body,html {
 	background-color: #3b4b54; width : 100%;
 	height: 100%;
 	margin: 0 auto;
-	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+font-family: 'Source Sans Pro', sans-serif;
 	color: #ffffff;
 }
 
@@ -110,7 +110,7 @@ body{
     font-size:30px;
     text-align:center;
     font-color:white;
-    font-family: 'raleway';
+font-family: 'Source Sans Pro', sans-serif;
 }
 
 .beach{
@@ -122,9 +122,10 @@ body{
     position:absolute;
     height:100%;
     width:100%;
-    top:-800px;
+    top:-1550px;
     left:0;
     background-color:white;
+    z-index:10;
 }
 
 .arrow{
@@ -163,14 +164,18 @@ right:20px;
 }
 
 .pic{
+    line-height:330px;
     position:relative;
     background-image:url('images/waikiki beach.png');
     background-size:cover;
     width:330px;
     height:330px;
     left:calc(50% - 165px);
-    top:-740px;
+    top:-760px;
     border-radius: 100%;
+    	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
 }
 
 .address{
@@ -179,10 +184,8 @@ right:20px;
     top:410px !important;
     text-align: center;
     color:grey;
-    font-family: 'raleway';
-    font-size:19px;
-    padding-right:8px;
-    
+font-family: 'Source Sans Pro', sans-serif;
+    font-size:18px;
 }
 
 .place{
@@ -196,7 +199,7 @@ right:20px;
     width:40px;
     position:absolute;
     z-index:30 !important;
-left:5px;
+left:40px;
     top:85px;
 }
 
@@ -230,7 +233,7 @@ left:5px;
     position:absolute;
     height:100%;
     width:100%;
-    top:-800px;
+    top:-1550px;
     left:0;
     background-color:white;
 }
@@ -245,7 +248,7 @@ left:5px;
     font-size:30px;
     text-align:center;
     font-color:white;
-    font-family: 'raleway';
+font-family: 'Source Sans Pro', sans-serif;
 }
 
 .mountain{
@@ -260,8 +263,9 @@ left:5px;
     width:330px;
     height:330px;
     left:calc(50% - 165px);
-    top:-740px;
+    top:-760px;
     border-radius: 100%;
+       line-height:330px;
 }
 
 .checkIn{
@@ -309,6 +313,21 @@ left:5px;
     top:620px;
 }
 
+.checkIn3{
+    background-image:url('images/success (2).png');
+    background-repeat:no-repeat;
+    background-color:white;
+    background-size:40px 40px;
+    border:0 !important;
+    outline:0 !important;
+    height:40px;
+    width:40px;
+    position:absolute;
+    z-index:30 !important;
+    left:calc(50% - 20px);
+    top:620px;
+}
+
 .emergency{
     width:100%;
     height:300px;
@@ -317,9 +336,61 @@ left:5px;
     position:absolute;
     background-color:rgba(92,92,92,0.8);
 text-align:center;
+ font-family: 'Source Sans Pro', sans-serif;
 
 }
 .text{
-    margin-top:25px;
+    padding-bottom:15px;
+    margin-top:30px;
     font-size:25px;
+    border-bottom:1px solid white;
+    font-weight:bold;
 }
+
+.subtext{
+    font-size:22px;
+}
+
+.baggage{
+    background-image:url('images/baggage.png');
+    background-repeat:no-repeat;
+    background-color:transparent;
+    background-size:40px 40px;
+    height:40px;
+    width:40px;
+    position:absolute;
+    z-index:5;
+    left:310px;
+    top:95px;
+}
+
+.lost{
+    background-image:url('images/lost.png');
+    background-repeat:no-repeat;
+    background-color:transparent;
+    background-size:40px 40px;
+    height:40px;
+    width:40px;
+    position:absolute;
+    z-index:5;
+    left:310px;
+    top:154px;
+}
+
+.aid{
+        background-image:url('images/aid.png');
+    background-repeat:no-repeat;
+    background-color:transparent;
+    background-size:40px 40px;
+    height:40px;
+    width:40px;
+    position:absolute;
+    z-index:5;
+    left:310px;
+    top:212px;
+}
+
+.color{
+    color:#007FFF;
+}
+
